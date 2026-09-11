@@ -1,1 +1,94 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Type Race</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <main class="container">
+
+    <header>
+      <h1>TYPE<span>RACE</span></h1>
+      <p>How fast can you type?</p>
+    </header>
+
+    <section class="stats">
+      <div class="stat">
+        <span>TIME</span>
+        <strong id="timer">60</strong>
+      </div>
+
+      <div class="stat">
+        <span>WPM</span>
+        <strong id="wpm">0</strong>
+      </div>
+
+      <div class="stat">
+        <span>ACCURACY</span>
+        <strong id="accuracy">100%</strong>
+      </div>
+
+      <div class="stat">
+        <span>ERRORS</span>
+        <strong id="errors">0</strong>
+      </div>
+    </section>
+
+    <section class="race-card">
+
+      <div id="countdown" class="countdown">
+        PRESS START
+      </div>
+
+      <div id="textDisplay" class="text-display">
+        Press the Start Race button to begin.
+      </div>
+
+      <textarea
+        id="typingInput"
+        placeholder="Your typing goes here..."
+        disabled
+        spellcheck="false"
+      ></textarea>
+
+      <div class="progress-container">
+        <div id="progressBar" class="progress-bar"></div>
+      </div>
+
+      <button id="startButton">START RACE</button>
+
+    </section>
+
+    <section id="result" class="result hidden">
+      <h2>🏁 RACE COMPLETE</h2>
+
+      <div class="result-grid">
+        <div>
+          <span>WPM</span>
+          <strong id="finalWpm">0</strong>
+        </div>
+
+        <div>
+          <span>ACCURACY</span>
+          <strong id="finalAccuracy">100%</strong>
+        </div>
+
+        <div>
+          <span>ERRORS</span>
+          <strong id="finalErrors">0</strong>
+        </div>
+      </div>
+
+      <button id="restartButton">RACE AGAIN</button>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
